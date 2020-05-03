@@ -51,6 +51,6 @@ TypeOK ==
     /\ buffer \in SUBSET (Items \X Time)
 THEOREM Spec => []TypeOK
 ----
-BufferObeysTimelimit == \A item \in buffer: currentTime - item[2] =< TTL
-THEOREM Spec => []BufferObeysTimelimit
+BufferRespectsTTL == \A item \in buffer: currentTime - item[2] =< TTL
+THEOREM Spec => []BufferRespectsTTL
 ====
