@@ -32,7 +32,7 @@ Init ==
 ----
 Step ==
     /\ movesCounter' = movesCounter + 1
-    (* Essence of the algorithm: while i steps on node forward, j does two-long step. *)
+    (* Essence of the algorithm: while i steps one node forward, j does two-nodes step. *)
     (* If given linked list is cycled indeed - which is guaranteed by the nextLinkIndex - *)
     (* eventually both indexes will appear on the same node. *)
     /\ i' = nextLinkIndex[i]
